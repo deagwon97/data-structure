@@ -13,23 +13,12 @@ void error(char str[])
 }
 
 
-void init_stack(){
-    top = -1;
-}
+void init_stack(){ top = -1;}
+int is_empty(){ return top == -1;}
+int is_full(){ return top == MAX_STACK_SIZE -1;}
+int size(){ return top + 1;}
 
-int is_empty(){
-    return top == -1;
-}
-
-int is_full(){
-    return top == MAX_STACK_SIZE -1;
-}
-int size(){
-    return top + 1;
-}
-
-void push(Element e)
-{
+void push(Element e){
     if (is_full())
         error("스택 포화 에러");
     data[++top] = e;
