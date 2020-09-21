@@ -35,14 +35,8 @@ void push(Element e){
 
 Element pop(){
     if (is_empty())   
-        error("스택 포화 에러");
+        error("스택 공백 에러");
     return data[top--];
-}
-
-Element peek(){
-    if (is_empty())   
-        error("스택 포화 에러");
-    return data[top];
 }
 
 void print_stack(){

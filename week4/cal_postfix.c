@@ -29,14 +29,8 @@ void push(Element e){
 
 Element pop(){
     if (is_empty())   
-        error("스택 포화 에러");
+        error("스택 공백 에러");
     return data[top--];
-}
-
-Element peek(){
-    if (is_empty())   
-        error("스택 포화 에러");
-    return data[top];
 }
 
 // 중간고사 출제
@@ -74,11 +68,10 @@ double calc_postfix(char expr[])
 }
 
 void main()
-{
-    char expr[2][80] = {"82/3-32*+",
-                         "12/4*14/*"};
+{ 
+    char expr[2][80] = {"5 3 4 6 + 7 * * 8 - 5 *"};
     printf("수식 : %s = %1f\n", expr[0], calc_postfix(expr[0]));
-    printf("수식 : %s = %1f\n", expr[1], calc_postfix(expr[1]));
+    //printf("수식 : %s = %1f\n", expr[1], calc_postfix(expr[1]));
 }
 
 

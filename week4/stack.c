@@ -13,20 +13,10 @@ void error(char str[])
 }
 
 
-void init_stack(){
-    top = -1;
-}
-
-int is_empty(){
-    return top == -1;
-}
-
-int is_full(){
-    return top == MAX_STACK_SIZE -1;
-}
-int size(){
-    return top + 1;
-}
+void init_stack(){ top = -1;}
+int is_empty(){ return top == -1;}
+int is_full(){ return top == MAX_STACK_SIZE -1;}
+int size(){ return top + 1;}
 
 void push(Element e)
 {
@@ -55,18 +45,12 @@ void print_stack(){
     printf("\n");
 }
 
-typedef struct Student {
-    int id;
-    char name[32];
-    char dept[32];
-} Student;
-
 void main()
 {
     int i;
     init_stack();
-    push(10); 
-    push(13); 
+    push(1); 
+    push(2); 
     push(5); 
     push(7); 
     push(3); 
